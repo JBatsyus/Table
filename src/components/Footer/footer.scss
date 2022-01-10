@@ -1,0 +1,29 @@
+@import "../../assets/styles/fonts.scss";
+@import "../../assets/styles/color.scss";
+@import "../../assets/styles/mixins.scss";
+
+.footer {
+  flex: 0 0 auto;
+  height: 80px;
+  background-color: $asphalt;
+
+  .wrapper__footer {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 10px;
+    @include positionWord();
+  }
+
+  .footer__title,
+  .footer__text {
+    font-family: "Exo2", sans-serif;
+    font-size: 25px;
+    color: $cabbage;
+  }
+  .footer__text {
+    padding-top: 3px;
+    font-size: 15px;
+  }
+}

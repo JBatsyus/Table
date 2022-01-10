@@ -1,0 +1,18 @@
+@mixin position {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin positionWord {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+// стили шрифта для ячеек таблицы
+@mixin fontStyleCell {
+  font-family: "Dosis-Regular", sans-serif;
+  font-size: 25px;
+  padding: 5px;
+}
