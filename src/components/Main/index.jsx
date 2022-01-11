@@ -1,10 +1,81 @@
 import "./main.scss";
 import AddButton from "../AddButton/index.jsx";
+import Form from "../Form/index.jsx";
+import { useState } from "react";
+
+import {
+  DialogTitle,
+  Dialog,
+  DialogContent,
+  DialogContentText,
+  DialogActions,
+  Button,
+  ThemeProvider,
+  createTheme,
+} from "@mui/material";
 
 const Main = () => {
+  const theme = createTheme({
+    palette: {
+      background: {
+        paper: "#bfcba8",
+      },
+      text: {
+        primary: "#464f41",
+        secondary: "#56776c",
+      },
+    },
+  });
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
   return (
     <main className="main">
-      <AddButton />
+      <AddButton onClick={handleClickOpen} />
+      <ThemeProvider theme={theme}>
+        <Dialog
+          sx={{
+            ".MuiDialog-paper": {
+              bgcolor: "background.paper",
+            },
+          }}
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="form-dialog-title"
+        >
+          <DialogTitle
+            sx={{ color: "text.primary", fontSize: 25, fontWeight: "medium" }}
+            id="form-dialog-title"
+          >
+            Новый студент
+          </DialogTitle>
+          <DialogContent>
+            <DialogContentText
+              sx={{
+                color: "text.secondary",
+                fontSize: 20,
+              }}
+            >
+              Заполните, пожалуйста, форму
+            </DialogContentText>
+            <Form></Form>
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleClose} color="primary">
+              Закрыть
+            </Button>
+            <Button onClick={handleClose} color="primary">
+              Добавить
+            </Button>
+          </DialogActions>
+        </Dialog>
+      </ThemeProvider>
     </main>
   );
 };

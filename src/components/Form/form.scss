@@ -1,0 +1,12 @@
+@import "../../assets/styles/fonts.scss";
+@import "../../assets/styles/color.scss";
+@import "../../assets/styles/mixins.scss";
+
+// .box {
+// }
+.input__null {
+  @include fontStyleCell();
+  color: $asphalt;
+  border: none;
+  border-bottom: 2px solid $malachite;
+}
