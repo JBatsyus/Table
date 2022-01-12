@@ -18,10 +18,10 @@ const Main = () => {
   const theme = createTheme({
     palette: {
       background: {
-        paper: "#bfcba8",
+        paper: "#dce2d1",
       },
       text: {
-        primary: "#464f41",
+        primary: "#1f4f41",
         secondary: "#56776c",
       },
     },
@@ -67,10 +67,18 @@ const Main = () => {
             <Form></Form>
           </DialogContent>
           <DialogActions>
-            <Button onClick={handleClose} color="primary">
+            <Button
+              onClick={handleClose}
+              sx={{ color: "text.primary", fontSize: 15, fontWeight: "small" }}
+              color="primary"
+            >
               Закрыть
             </Button>
-            <Button onClick={handleClose} color="primary">
+            <Button
+              onClick={handleClose}
+              sx={{ color: "text.primary", fontSize: 15, fontWeight: "small" }}
+              color="primary"
+            >
               Добавить
             </Button>
           </DialogActions>

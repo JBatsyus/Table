@@ -33,13 +33,68 @@ const Form = () => {
         required
       />
       <input
-        className="input__null"
+        className="input__null indent"
         type="date"
         title="Дата рождения"
         name="hbty"
         pattern="^[А-Яа-я]+$"
         required
       />
+      <label className="label">
+        История
+        <input
+          className="input__number"
+          type="number"
+          name="history"
+          min="1"
+          max="5"
+          required
+        />
+      </label>
+      <label className="label">
+        Философия
+        <input
+          className="input__number"
+          type="number"
+          name="philosophy"
+          min="1"
+          max="5"
+          required
+        />
+      </label>
+      <label className="label">
+        Информатика
+        <input
+          className="input__number"
+          type="number"
+          name="informatics"
+          min="1"
+          max="5"
+          required
+        />
+      </label>
+      <label className="label">
+        Экономика
+        <input
+          className="input__number"
+          type="number"
+          name="economics"
+          min="1"
+          max="5"
+          required
+        />
+      </label>
+      <label className="label">
+        Физика
+        <input
+          className="input__number"
+          type="number"
+          name="physics"
+          min="1"
+          max="5"
+          required
+        />
+      </label>
     </div>
   );
 };

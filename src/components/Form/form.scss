@@ -2,11 +2,35 @@
 @import "../../assets/styles/color.scss";
 @import "../../assets/styles/mixins.scss";
 
-// .box {
-// }
-.input__null {
-  @include fontStyleCell();
-  color: $asphalt;
-  border: none;
-  border-bottom: 2px solid $malachite;
+.box {
+  @include position();
+  flex-direction: column;
+  .input__null {
+    @include fontStyleCell();
+    @include inputForm();
+    width: 95%;
+    text-align: left;
+  }
+  .label {
+    order: 999;
+    margin-left: auto;
+    font-family: "Exo2", sans-serif;
+    font-size: 25px;
+    color: $asphalt;
+  }
+  .input__number {
+    @include inputForm();
+    margin-left: 15px;
+    text-align: center;
+  }
+}
+.indent {
+  margin-bottom: 20px;
+}
+
+// - стрелки
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

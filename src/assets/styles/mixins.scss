@@ -1,3 +1,5 @@
+@import "./color.scss";
+
 @mixin position {
   display: flex;
   align-items: center;
@@ -12,7 +14,15 @@
 }
 // стили шрифта для ячеек таблицы
 @mixin fontStyleCell {
-  font-family: "Dosis-Regular", sans-serif;
+  font-family: "Exo2", sans-serif;
   font-size: 25px;
   padding: 5px;
+}
+@mixin inputForm {
+  font-size: 25px;
+  color: $asphalt;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 2px solid $malachite;
 }
