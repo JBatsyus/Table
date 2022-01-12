@@ -1,0 +1,12 @@
+@import "../../assets/styles/mixins.scss";
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.input__search {
+  @include fontStyleCell();
+  @include inputForm();
+  margin-right: 15px;
+}

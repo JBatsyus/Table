@@ -1,0 +1,65 @@
+@import "../../assets/styles/fonts.scss";
+@import "../../assets/styles/color.scss";
+@import "../../assets/styles/mixins.scss";
+
+.container {
+  margin-top: 100px;
+  @include positionWord();
+}
+
+.table {
+  width: 85%;
+  margin-bottom: 10px;
+  border: 10px solid $eucalyptus;
+  border-top: 5px solid $eucalyptus;
+  border-collapse: collapse;
+  & th {
+    font-family: "Exo2", sans-serif;
+    font-size: 20px;
+    color: $asphalt;
+    padding: 10px;
+    background: $cabbag_lite;
+    border: none;
+    border-bottom: 2px solid $eucalyptus;
+  }
+  //   }
+  & td {
+    @include fontStyleCell();
+    color: $asphalt;
+    border: none;
+    border-bottom: 2px solid $eucalyptus;
+  }
+  .input__null {
+    @include fontStyleCell();
+    @include inputForm();
+    width: 95%;
+    text-align: left;
+  }
+  .input__number {
+    @include inputForm();
+    margin-left: 15px;
+    text-align: center;
+  }
+  //     .input_editMode {
+  //       @include fontStyleCell();
+  //       @include inputForm();
+  //       width: 95%;
+  //       text-align: left;
+  //     }
+  //     .inputError {
+  //       outline: none;
+  //       background: transparent;
+  //       border-bottom: 1px solid $red_McDonalds;
+  //       text-align: center;
+  //     }
+
+  //     .error {
+  //       color: $red_McDonalds;
+  //       font-family: "Exo2", sans-serif;
+  //       font-size: 15px;
+  //       padding: 5px;
+  //       text-align: center;
+  //     }
+  //   }
+  // }
+}

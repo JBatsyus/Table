@@ -1,8 +1,9 @@
 import "./main.scss";
 import AddButton from "../AddButton/index.jsx";
 import Form from "../Form/index.jsx";
+import Table from "../Table/index.jsx";
+import Search from "../Search/index.jsx";
 import { useState } from "react";
-
 import {
   DialogTitle,
   Dialog,
@@ -38,6 +39,7 @@ const Main = () => {
   return (
     <main className="main">
       <AddButton onClick={handleClickOpen} />
+      <Search></Search>
       <ThemeProvider theme={theme}>
         <Dialog
           sx={{
@@ -84,6 +86,7 @@ const Main = () => {
           </DialogActions>
         </Dialog>
       </ThemeProvider>
+      <Table></Table>
     </main>
   );
 };
