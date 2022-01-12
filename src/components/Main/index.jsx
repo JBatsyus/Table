@@ -38,8 +38,10 @@ const Main = () => {
   };
   return (
     <main className="main">
-      <AddButton onClick={handleClickOpen} />
-      <Search></Search>
+      <div className="position">
+        <AddButton onClick={handleClickOpen} />
+        <Search />
+      </div>
       <ThemeProvider theme={theme}>
         <Dialog
           sx={{

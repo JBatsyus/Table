@@ -14,7 +14,7 @@ const Search = () => {
         placeholder="Поиск"
         required
       />
-      <SearchButton></SearchButton>
+      <SearchButton />
     </div>
   );
 };
