@@ -1,6 +1,6 @@
-// import ButtonDelete from "../buttons/ButtonDelete";
-// import ButtonEdit from "../buttons/ButtonEdit";
-// import ButtonSave from "../buttons/ButtonSave";
+import DeleteButton from "../DeleteButton/index.jsx";
+import ChangeButton from "../ChangeButton/index.jsx";
+import ButtonSave from "../SaveButton/index.jsx";
 import { useState } from "react";
 
 const Row = props => {
@@ -124,7 +124,11 @@ const Row = props => {
         />
       </td>
 
-      <td></td>
+      <td>
+        <ChangeButton />
+        <ButtonSave />
+        <DeleteButton />
+      </td>
     </tr>
   );
 };

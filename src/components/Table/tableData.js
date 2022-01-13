@@ -1,9 +1,9 @@
 export const tableData = [
   {
     id: 1,
-    surname: "Калабина",
-    name: "Юлия",
-    patronymic: "Ивановна",
+    surname: "Фввв",
+    name: "Юпноне",
+    patronymic: "Зььл",
     hbty: "15.10.1989",
     history: "5",
     philosophy: "5",

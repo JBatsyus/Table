@@ -2,18 +2,30 @@ import "./table.scss";
 // import TableWords from "../table/TableWords";
 
 import TableData from "..//Table/TableData.jsx";
+import SortButton from "..//SortButton/index.jsx";
 
 const Table = () => {
   return (
     <div className="container">
       <table className="table">
         <thead>
-          <tr className="table__title">
-            <th>№</th>
-            <th>Фамилия</th>
-            <th>Имя</th>
-            <th>Отчество</th>
-            <th>Дата рождения</th>
+          <tr>
+            <th>
+              № <SortButton />
+            </th>
+
+            <th>
+              Фамилия <SortButton />
+            </th>
+            <th>
+              Имя <SortButton />
+            </th>
+            <th>
+              Отчество <SortButton />
+            </th>
+            <th>
+              Дата рождения <SortButton />
+            </th>
             <th>История</th>
             <th>Философия</th>
             <th>Математика</th>

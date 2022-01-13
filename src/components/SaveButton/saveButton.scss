@@ -1,0 +1,23 @@
+@import "../../assets/styles/fonts.scss";
+@import "../../assets/styles/color.scss";
+
+.btn__save {
+  width: 40px;
+  margin: 2px;
+  font-family: "Exo2", sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+  box-shadow: 1px 1px 2px #4f4f4f;
+  border-radius: 3px;
+  border: 2px solid $eucalyptus;
+  background-color: $malachite;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $eucalyptus;
+    transform: scale(0.99);
+  }
+  &:active {
+    transform: scale(0.96);
+  }
+}

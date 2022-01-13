@@ -33,7 +33,7 @@
     @include inputForm();
     text-align: center;
     border: none;
-    width: 20px;
+    width: 40px;
   }
   .input__null {
     @include fontStyleCell();
@@ -48,6 +48,7 @@
     text-align: center;
     border: none;
   }
+
   //     .input_editMode {
   //       @include fontStyleCell();
   //       @include inputForm();
@@ -70,4 +71,8 @@
   //     }
   //   }
   // }
+}
+.table__title {
+  display: flex;
+  flex-direction: row;
 }

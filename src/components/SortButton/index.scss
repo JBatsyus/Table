@@ -1,0 +1,25 @@
+@import "../../assets/styles/fonts.scss";
+@import "../../assets/styles/color.scss";
+
+.container__sort {
+  display: flex;
+  flex-direction: column;
+}
+.btn__sort {
+  border: none;
+  padding: inherit;
+  color: $eucalyptus;
+  // прозрачный фон
+  background-color: transparent;
+  width: 20px;
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    color: #fff;
+    background-color: $eucalyptus;
+    transform: scale(0.99);
+  }
+  &:active {
+    transform: scale(0.96);
+  }
+}
