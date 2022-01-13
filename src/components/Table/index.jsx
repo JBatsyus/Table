@@ -1,7 +1,7 @@
 import "./table.scss";
 // import TableWords from "../table/TableWords";
 
-import Row from "..//Table/Row.jsx";
+import TableData from "..//Table/TableData.jsx";
 
 const Table = () => {
   return (
@@ -9,6 +9,7 @@ const Table = () => {
       <table className="table">
         <thead>
           <tr className="table__title">
+            <th>№</th>
             <th>Фамилия</th>
             <th>Имя</th>
             <th>Отчество</th>
@@ -23,7 +24,7 @@ const Table = () => {
         </thead>
 
         <tbody>
-          <Row />
+          <TableData />
         </tbody>
       </table>
     </div>

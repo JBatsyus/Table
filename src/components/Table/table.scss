@@ -10,7 +10,7 @@
 .table {
   width: 85%;
   margin-bottom: 10px;
-  border: 10px solid $eucalyptus;
+  border: 5px solid $eucalyptus;
   border-top: 5px solid $eucalyptus;
   border-collapse: collapse;
   & th {
@@ -26,19 +26,27 @@
   & td {
     @include fontStyleCell();
     color: $asphalt;
-    border: none;
     border-bottom: 2px solid $eucalyptus;
+  }
+  .input__id {
+    @include fontStyleCell();
+    @include inputForm();
+    text-align: center;
+    border: none;
+    width: 20px;
   }
   .input__null {
     @include fontStyleCell();
     @include inputForm();
+    border: none;
     width: 95%;
-    text-align: left;
+    text-align: center;
   }
   .input__number {
     @include inputForm();
     margin-left: 15px;
     text-align: center;
+    border: none;
   }
   //     .input_editMode {
   //       @include fontStyleCell();
