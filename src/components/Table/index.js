@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MaterialTable from "material-table";
-import { dataList } from "./dataList";
 import "./table.scss";
+import dataList from "./dataList.json";
 
 const patternNum = /^[0-9]+$/;
 const patternCyrillic = /^[а-яё 0-9]+$/i;
@@ -9,7 +9,7 @@ const patternCyrillic = /^[а-яё 0-9]+$/i;
 const Table = () => {
   const [data, setData] = useState(dataList);
 
-  const [columns, setColumns] = useState([
+  const [columns] = useState([
     {
       title: "№",
       field: "id",
@@ -162,6 +162,20 @@ const Table = () => {
       },
     },
   ]);
+  // сохрание  LS, проверяет, есть ли что-то в LS
+  useEffect(() => {
+    const dataListMas = JSON.parse(localStorage.getItem("dataList"));
+    if (dataListMas) {
+      setData(dataListMas);
+    }
+  }, []);
+
+  // сработал US, data изменена => переписывает массив dataList
+  useEffect(() => {
+    if (data) {
+      localStorage.setItem("dataList", JSON.stringify(data));
+    }
+  }, [data]);
   return (
     <div className="box">
       <MaterialTable
@@ -170,7 +184,7 @@ const Table = () => {
         columns={columns}
         editable={{
           onRowAdd: newData =>
-            new Promise((resolve, reject) => {
+            new Promise(resolve => {
               setTimeout(() => {
                 setData([...data, { ...newData, id: data.length + 1 }]);
 
@@ -178,7 +192,7 @@ const Table = () => {
               }, 1000);
             }),
           onRowUpdate: (newData, oldData) =>
-            new Promise((resolve, reject) => {
+            new Promise(resolve => {
               setTimeout(() => {
                 const dataUpdate = [...data];
                 const index = oldData.tableData.id;
@@ -189,7 +203,7 @@ const Table = () => {
               }, 1000);
             }),
           onRowDelete: oldData =>
-            new Promise((resolve, reject) => {
+            new Promise(resolve => {
               setTimeout(() => {
                 const dataDelete = [...data];
                 const index = oldData.tableData.id;

@@ -1,0 +1,87 @@
+[
+  {
+    "id": 1,
+    "surname": "Толстой",
+    "name": "Лев",
+    "patronymic": "Николаевич",
+    "hbty": "12.08.1828",
+    "history": "5",
+    "philosophy": "5",
+    "informatics": "5",
+    "economics": "5",
+    "physics": "5"
+  },
+  {
+    "id": 2,
+    "surname": "Пушкин",
+    "name": "Александр",
+    "patronymic": "Сергеевич",
+    "hbty": "26.05.1799",
+    "history": "2",
+    "philosophy": "5",
+    "informatics": "5",
+    "economics": "5",
+    "physics": "5"
+  },
+
+  {
+    "id": 3,
+    "surname": "Камбербэтч",
+    "name": "Бенедикт",
+    "patronymic": "Тимофеевич",
+    "hbty": "19.07.1976",
+    "history": "5",
+    "philosophy": "4",
+    "informatics": "2",
+    "economics": "5",
+    "physics": "5"
+  },
+  {
+    "id": 4,
+    "surname": "Драйвер",
+    "name": "Адам",
+    "patronymic": "Дуглас",
+    "hbty": "19.11.1983",
+    "history": "5",
+    "philosophy": "4",
+    "informatics": "2",
+    "economics": "5",
+    "physics": "5"
+  },
+  {
+    "id": 5,
+    "surname": "Бонем Картер",
+    "name": "Хелена",
+    "patronymic": "Рэймонд",
+    "hbty": "26.05.1966",
+    "history": "5",
+    "philosophy": "4",
+    "informatics": "2",
+    "economics": "5",
+    "physics": "5"
+  },
+  {
+    "id": 6,
+    "surname": "Дэймон",
+    "name": "Мэттью",
+    "patronymic": "Кентович",
+    "hbty": "08.10.1970",
+    "history": "5",
+    "philosophy": "4",
+    "informatics": "2",
+    "economics": "5",
+    "physics": "5"
+  },
+  {
+    "id": 7,
+    "surname": "Суинтон",
+    "name": "Матильда",
+    "patronymic": "Джозеф",
+    "hbty": "05.11.1960",
+    "history": "5",
+    "philosophy": "4",
+    "informatics": "2",
+    "economics": "5",
+    "physics": "5"
+  }
+]
