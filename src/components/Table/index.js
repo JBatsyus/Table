@@ -4,6 +4,14 @@ import dataList from "./dataList.json";
 
 const patternCyrillic = /^[а-яё 0-9]+$/i;
 
+// вертикаль
+const cellStyle = () => {
+  return {
+    textAlign: "center",
+    borderRight: `1px solid rgba(224, 224, 224, 1)`,
+  };
+};
+
 const Table = () => {
   // состояние таблицы
   const [data, setData] = useState(dataList);
@@ -14,6 +22,7 @@ const Table = () => {
       title: "№",
       field: "id",
       editable: false,
+      cellStyle,
     },
     {
       title: "Фамилия",
@@ -28,6 +37,7 @@ const Table = () => {
         }
         return true;
       },
+      cellStyle,
     },
     {
       title: "Имя",
@@ -42,6 +52,8 @@ const Table = () => {
         }
         return true;
       },
+
+      cellStyle,
     },
     {
       title: "Отчество",
@@ -57,6 +69,7 @@ const Table = () => {
 
         return true;
       },
+      cellStyle,
     },
     {
       title: "Дата рождения",
@@ -68,6 +81,7 @@ const Table = () => {
         }
         return true;
       },
+      cellStyle,
     },
     {
       title: "История",
@@ -81,6 +95,7 @@ const Table = () => {
         }
         return true;
       },
+      cellStyle,
     },
     {
       title: "Философия",
@@ -94,6 +109,7 @@ const Table = () => {
         }
         return true;
       },
+      cellStyle,
     },
     {
       title: "Информатика",
@@ -107,6 +123,7 @@ const Table = () => {
         }
         return true;
       },
+      cellStyle,
     },
     {
       title: "Экономика",
@@ -120,6 +137,7 @@ const Table = () => {
         }
         return true;
       },
+      cellStyle,
     },
     {
       title: "Физика",
@@ -133,6 +151,7 @@ const Table = () => {
         }
         return true;
       },
+      cellStyle,
     },
   ]);
   // сохрание  LS, проверяет, есть ли что-то в LS
