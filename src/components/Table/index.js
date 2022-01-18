@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import MaterialTable from "material-table";
-import "./table.scss";
 import dataList from "./dataList.json";
 
-const patternNum = /^[0-9]+$/;
 const patternCyrillic = /^[а-яё 0-9]+$/i;
 
 const Table = () => {
+  // состояние таблицы
   const [data, setData] = useState(dataList);
 
+  // колонки и валидация строк
   const [columns] = useState([
     {
       title: "№",
@@ -37,7 +37,7 @@ const Table = () => {
           return "Пустое поле";
         } else if (rowData.name.length < 2) {
           return "Неверное имя";
-        } else if (!patternCyrillic.test(rowData.name)) {
+        } else if (!patternCyrillic.test(rowData.surname)) {
           return "Только кириллица";
         }
         return true;
@@ -61,18 +61,11 @@ const Table = () => {
     {
       title: "Дата рождения",
       field: "hbty",
-      editComponent: props => (
-        <input
-          type="date"
-          value={props.value}
-          onChange={e => props.onChange(e.target.value)}
-        />
-      ),
+      type: "date",
       validate: rowData => {
         if (rowData.hbty === undefined || rowData.hbty === "") {
           return "01.02.1900";
         }
-
         return true;
       },
     },
@@ -81,11 +74,7 @@ const Table = () => {
       field: "history",
       type: "numeric",
       validate: rowData => {
-        if (
-          rowData.history === undefined ||
-          rowData.history === "" ||
-          !patternNum.test(rowData.history)
-        ) {
+        if (rowData.history === undefined || rowData.history === "") {
           return "Поставьте оценку";
         } else if (rowData.history.length < 1) {
           return "Поставьте оценку";
@@ -98,11 +87,7 @@ const Table = () => {
       field: "philosophy",
       type: "numeric",
       validate: rowData => {
-        if (
-          rowData.philosophy === undefined ||
-          rowData.philosophy === "" ||
-          !patternNum.test(rowData.philosophy)
-        ) {
+        if (rowData.philosophy === undefined || rowData.philosophy === "") {
           return "Поставьте оценку";
         } else if (rowData.philosophy.length < 1) {
           return "Поставьте оценку";
@@ -115,11 +100,7 @@ const Table = () => {
       field: "informatics",
       type: "numeric",
       validate: rowData => {
-        if (
-          rowData.informatics === undefined ||
-          rowData.informatics === "" ||
-          !patternNum.test(rowData.informatics)
-        ) {
+        if (rowData.informatics === undefined || rowData.informatics === "") {
           return "Поставьте оценку";
         } else if (rowData.informatics.length < 1) {
           return "Поставьте оценку";
@@ -132,11 +113,7 @@ const Table = () => {
       field: "economics",
       type: "numeric",
       validate: rowData => {
-        if (
-          rowData.economics === undefined ||
-          rowData.economics === "" ||
-          !patternNum.test(rowData.economics)
-        ) {
+        if (rowData.economics === undefined || rowData.economics === "") {
           return "Поставьте оценку";
         } else if (rowData.economics.length < 1) {
           return "Поставьте оценку";
@@ -149,11 +126,7 @@ const Table = () => {
       field: "physics",
       type: "numeric",
       validate: rowData => {
-        if (
-          rowData.physics === undefined ||
-          rowData.physics === "" ||
-          !patternNum.test(rowData.physics)
-        ) {
+        if (rowData.physics === undefined || rowData.physics === "") {
           return "Поставьте оценку";
         } else if (rowData.physics.length < 1) {
           return "Поставьте оценку";
@@ -170,7 +143,7 @@ const Table = () => {
     }
   }, []);
 
-  // сработал US, data изменена => переписывает массив dataList
+  // сработал LS, data изменена => переписывает массив dataList
   useEffect(() => {
     if (data) {
       localStorage.setItem("dataList", JSON.stringify(data));
@@ -185,33 +158,24 @@ const Table = () => {
         editable={{
           onRowAdd: newData =>
             new Promise(resolve => {
-              setTimeout(() => {
-                setData([...data, { ...newData, id: data.length + 1 }]);
-
-                resolve();
-              }, 1000);
+              setData([...data, { ...newData, id: data.length + 1 }]);
+              resolve();
             }),
           onRowUpdate: (newData, oldData) =>
             new Promise(resolve => {
-              setTimeout(() => {
-                const dataUpdate = [...data];
-                const index = oldData.tableData.id;
-                dataUpdate[index] = newData;
-                setData([...dataUpdate]);
-
-                resolve();
-              }, 1000);
+              const dataUpdate = [...data];
+              const index = oldData.tableData.id;
+              dataUpdate[index] = newData;
+              setData([...dataUpdate]);
+              resolve();
             }),
           onRowDelete: oldData =>
             new Promise(resolve => {
-              setTimeout(() => {
-                const dataDelete = [...data];
-                const index = oldData.tableData.id;
-                dataDelete.splice(index, 1);
-                setData([...dataDelete]);
-
-                resolve();
-              }, 1000);
+              const dataDelete = [...data];
+              const index = oldData.tableData.id;
+              dataDelete.splice(index, 1);
+              setData([...dataDelete]);
+              resolve();
             }),
         }}
         options={{
