@@ -27,9 +27,20 @@ web-сайта или консольной программы. Реализов�
     
     <hr>
     
+    ![gif](https://github.com/JBatsyus/----------------/blob/master/src/assets/img/%D0%B3%D0%B8%D1%84.gif)
+    
     #### Используемые технологии:
 
 - React
 - React Hooks
 - [SASS](https://sass-lang.com/)
 - [Material-table](https://material-table.com///github.com/alexfoxy/lax.js)
+
+#### Запуск приложения:
+
+```
+npm install
+npm start
+```
+
+Откройте [http://localhost:3000](http://localhost:3000), чтобы просмотреть его в браузере.
