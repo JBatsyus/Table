@@ -37,7 +37,7 @@ web-сайта или консольной программы. Реализов�
 - React
 - React Hooks
 - [SASS](https://sass-lang.com/)
-- [Material-table](https://material-table.com///github.com/alexfoxy/lax.js)
+- [Material-table](https://material-table.com/#/)
 
 #### Запуск приложения:
 
