@@ -27,6 +27,9 @@ web-сайта или консольной программы. Реализов�
     
     <hr>
     
+    ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/JBatsyus/----------------?color=%20%23278a5b&style=flat-square) ![GitHub last commit](https://img.shields.io/github/last-commit/JBatsyus/----------------?color=%20%23278a5b&style=flat-square) ![GitHub language count](https://img.shields.io/github/languages/count/JBatsyus/----------------?color=%20%23278a5b&style=flat-square) ![GitHub top language](https://img.shields.io/github/languages/top/JBatsyus/----------------?color=%20%23278a5b&style=flat-square) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/JBatsyus/----------------?color=%20%23278a5b&style=flat-square) ![Lines of code](https://img.shields.io/tokei/lines/github/JBatsyus/----------------?color=%20%23278a5b&style=flat-square) ![GitHub repo size](https://img.shields.io/github/repo-size/JBatsyus/----------------?color=%20%23278a5b&style=flat-square) ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/JBatsyus/----------------?color=%20%23278a5b&style=flat-square)
+    <hr>
+    
     ![gif](https://github.com/JBatsyus/----------------/blob/master/src/assets/img/%D0%B3%D0%B8%D1%84.gif)
     
     #### Используемые технологии:
