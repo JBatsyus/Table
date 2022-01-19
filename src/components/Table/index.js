@@ -171,7 +171,7 @@ const Table = () => {
   return (
     <div className="box">
       <MaterialTable
-        title="Таблица для обработки и хранения данных учащиххся"
+        title="Таблица для обработки и хранения данных учащихся"
         data={data}
         columns={columns}
         editable={{
